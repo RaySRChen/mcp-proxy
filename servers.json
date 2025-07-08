@@ -5,7 +5,8 @@
       "command": "npx",
       "args": ["-y", "@upstash/context7-mcp"]
     },
-      "fetch": {
+    "fetch": {
+      "transport": "stdio",
       "command": "uvx",
       "args": ["mcp-server-fetch"]
     },
@@ -13,6 +14,45 @@
       "transport": "stdio",
       "command": "uvx",
       "args": ["mcp-server-time", "--local-timezone", "Etc/UTC"]
+    },
+    "sequential-thinking": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "github": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ]
+    },
+    "exa": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-mcp-server",
+        "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search"
+      ]
+    },
+    "line-bot": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "@line/line-bot-mcp-server"
+      ]
+    },
+    "playwright": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
     }
   }
 }
