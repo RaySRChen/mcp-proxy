@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e
 
+# Export environment variables to make them available to child processes
+export CHANNEL_ACCESS_TOKEN
+export DESTINATION_USER_ID
+export EXA_API_KEY
+
 # Default values
 TRANSPORT=${TRANSPORT:-sse}
 HOST=${HOST:-0.0.0.0}

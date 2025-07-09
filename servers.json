@@ -23,14 +23,6 @@
         "@modelcontextprotocol/server-sequential-thinking"
       ]
     },
-    "github": {
-      "transport": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-github"
-      ]
-    },
     "exa": {
       "transport": "stdio",
       "command": "npx",
@@ -38,21 +30,21 @@
         "-y",
         "exa-mcp-server",
         "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search"
-      ]
+      ],
+      "env": {
+        "EXA_API_KEY": "***REMOVED***"
+      }
     },
     "line-bot": {
       "transport": "stdio",
       "command": "npx",
       "args": [
         "@line/line-bot-mcp-server"
-      ]
-    },
-    "playwright": {
-      "transport": "stdio",
-      "command": "npx",
-      "args": [
-        "@playwright/mcp@latest"
-      ]
+      ],
+      "env": {
+        "CHANNEL_ACCESS_TOKEN": "***REMOVED***",
+        "DESTINATION_USER_ID": "***REMOVED***"
+      }
     }
   }
 }

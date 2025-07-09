@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mcp-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./servers.json:/app/servers.json:ro
+    environment:
+      - TZ=${TZ}
+      - TRANSPORT=${TRANSPORT}
+      - HOST=${HOST}
+      - PORT=${PORT}
+      - CHANNEL_ACCESS_TOKEN=${CHANNEL_ACCESS_TOKEN}
+      - DESTINATION_USER_ID=${DESTINATION_USER_ID}
+      - EXA_API_KEY=${EXA_API_KEY}
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:${PORT}/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
