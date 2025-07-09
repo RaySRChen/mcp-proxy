@@ -15,14 +15,6 @@
       "command": "uvx",
       "args": ["mcp-server-time", "--local-timezone", "Etc/UTC"]
     },
-    "sequential-thinking": {
-      "transport": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
     "exa": {
       "transport": "stdio",
       "command": "npx",
