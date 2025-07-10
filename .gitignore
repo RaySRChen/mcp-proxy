@@ -8,3 +8,5 @@ prompt/
 __pycache__/
 
 .env
+
+.env

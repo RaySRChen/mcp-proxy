@@ -24,7 +24,7 @@
         "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search"
       ],
       "env": {
-        "EXA_API_KEY": "***REMOVED***"
+        "EXA_API_KEY": "7a71cde6-62ac-4cab-ab5d-b63e4b252d4c"
       }
     },
     "line-bot": {
