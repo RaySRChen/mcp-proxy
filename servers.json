@@ -24,7 +24,7 @@
         "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search"
       ],
       "env": {
-        "EXA_API_KEY": "7a71cde6-62ac-4cab-ab5d-b63e4b252d4c"
+        "EXA_API_KEY": "${EXA_API_KEY}"
       }
     },
     "line-bot": {
@@ -34,8 +34,8 @@
         "@line/line-bot-mcp-server"
       ],
       "env": {
-        "CHANNEL_ACCESS_TOKEN": "***REMOVED***",
-        "DESTINATION_USER_ID": "***REMOVED***"
+        "CHANNEL_ACCESS_TOKEN": "${CHANNEL_ACCESS_TOKEN}",
+        "DESTINATION_USER_ID": "${DESTINATION_USER_ID}"
       }
     }
   }
